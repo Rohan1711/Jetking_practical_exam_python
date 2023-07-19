@@ -1,0 +1,112 @@
+1) Define Python Classes and Objects and explain how to create a
+class and how to instantiate a class using an object in Python
+Programming.
+
+Ans-
+class- aclas  is user define blueprint or prototype from which onjects are created. classes provide a means of bulding data and functionality together.
+
+Object-object is an instance of a class
+
+Ex-
+
+class Animal:
+    animalnm1="cat"
+    sound="mawmaw"
+
+    def fun(self):
+        print("Animal is",self.animalnm1)
+        print("sound is",self.sound)
+
+ani=Animal()
+print(ani.animalnm1)
+ani.fun()
+        
+2) Write a Python Program to find the area of a rectangle using
+Python Classes.
+Ans
+class Rectangle():
+    def __init__(self,breadth,length):
+        self.length=length
+        self.breadth=breadth
+
+    def area(self):
+        return self.length * self.breadth
+    
+a= int(input("enter the length of ractangle : "))  
+b= int(input("enter the breadth of ractangle : "))   
+obj = Rectangle(a,b)
+print("the area of the ractangle is :",obj.area())
+
+3) Write a Python Program to create a Class which performs basic
+calculator operations.
+Ans
+
+class Calculator():
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+
+    def add(self):
+        return self.a + self.b
+    
+    def sub(self):
+        return self.a - self.b
+    
+    def mul(self):
+        return self.a * self.b
+    
+    def div(self):
+        return self.a / self.b
+    
+    def mod(self):
+        return self.a % self.b
+    
+a= int(input("enter the first number : "))    
+b= int(input("enter the second number : "))
+obj = Calculator(a,b)
+
+choice =1
+
+while choice !=0:
+    print("0. Exit")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Modulus")
+
+    choice=int(input("enter your choice : "))
+    if choice==1:
+        print("result :",obj.add())
+    elif choice==2:
+        print("Result :",obj.sub())
+    elif choice==3:
+        print("Result :",obj.mul())
+    elif choice==4:
+        print("Result :",obj.div())   
+    elif choice==5:
+        print("Result :",obj.mod())  
+    elif choice==0:
+        print("Exsting")     
+    else:
+        print("invalid choice")
+
+        
+4) Write a Python Program to create a Class in which one method
+accepts a string from the User and another method prints it.
+
+Ans
+
+class Printstring():
+    def __init__(self):
+        self.string=""
+
+    def get(self):
+        self.string=input("enter the string :")
+
+    def show(self):
+        print("the string is: ",self.string)
+
+obj=Printstring()
+obj.get()        
+obj.show()
